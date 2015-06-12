@@ -50,7 +50,7 @@ function assert(expression, failureMessage) {
  with Dowington.
 */
 
-function Blob(){
+function Blob() {
   this.hoursEating = 0;
 }
 
@@ -109,7 +109,7 @@ var hello = {
 // speak, and method (that you'll place on the prototype) called
 // sayHello.
 
-function SentientBeing (planet, nativeLang) {
+function SentientBeing(planet, nativeLang) {
   // TODO: specify a home planet and a language
   // you'll need to add parameters to this constructor
   this.planet = planet;
@@ -117,22 +117,22 @@ function SentientBeing (planet, nativeLang) {
 }
 
 // sb is a SentientBeing object
-function sayHello (sb) {
-    // TODO: say hello prints out (console.log's) hello in the
-    // language of the speaker, but returns it in the language
-    // of the listener (the sb parameter above).
-    // use the 'hello' object at the beginning of this exercise
-    // to do the translating
+function sayHello(sb) {
+  // TODO: say hello prints out (console.log's) hello in the
+  // language of the speaker, but returns it in the language
+  // of the listener (the sb parameter above).
+  // use the 'hello' object at the beginning of this exercise
+  // to do the translating
 
-    //console.log = language of speaker
-    //return = language of listener
+  //console.log = language of speaker
+  //return = language of listener
 
-    console.log(hello[this.nativeLang]);
-    return hello[sb.nativeLang];
+  console.log(hello[this.nativeLang]);
+  return hello[sb.nativeLang];
 
-    //bracket notation - unlike expressions, object arguments need the brackets when console.log
+  //bracket notation - unlike expressions, object arguments need the brackets when console.log
 
-    //TODO: put this on the SentientBeing prototype
+  //TODO: put this on the SentientBeing prototype
 }
 
 SentientBeing.prototype.sayHello = sayHello;
@@ -140,15 +140,15 @@ SentientBeing.prototype.sayHello = sayHello;
 // TODO: create three subclasses of SentientBeing, one for each
 // species above (Klingon, Human, Romulan).
 
-function Human(){}
+function Human() {}
 
 Human.prototype = new SentientBeing("Earth", "federation standard");
 
-function Klingon(){}
+function Klingon() {}
 
 Klingon.prototype = new SentientBeing("Qo'noS", "klingon");
 
-function Romulan(){}
+function Romulan() {}
 
 Romulan.prototype = new SentientBeing("Jolan'tru", "romulan");
 
@@ -180,7 +180,6 @@ var people = ["Barry", "Ulysses", "Pubert", "Porkins", "Streetlamp", "Ember", "F
 var testChar = people[0].charAt(people[0].length - 1);
 console.log(testChar);
 
-
 function lastLetterSort(stringArray) {
   function byLastLetter(a, b) {
     //TODO: implement me. sort the strings in alphabetical
@@ -203,7 +202,7 @@ assert(people[1] === 'Streetlamp', 'The second index should contain "Streetlamp"
 function sumArray(numberArray) {
   var sum = 0;
   // TODO: implement me using forEach
-  numberArray.forEach(function(value){
+  numberArray.forEach(function(value) {
     sum += value;
   });
   return sum;
